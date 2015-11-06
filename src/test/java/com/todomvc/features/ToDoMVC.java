@@ -2,11 +2,11 @@ package com.todomvc.features;
 
 import com.todomvc.categories.Buggy;
 import com.todomvc.categories.Smoke;
-import com.todomvc.testconfigs.AtToDoMVCWithClearedDataAfterEachTest;
+import testconfigs.AtToDoMVCWithClearedDataAfterEachTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
-import static com.todomvc.pages.ToDoMVCPage.*;
+import static pages.ToDoMVCPage.*;
 
 public class ToDoMVC extends AtToDoMVCWithClearedDataAfterEachTest {
 

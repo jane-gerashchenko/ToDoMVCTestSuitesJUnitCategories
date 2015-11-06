@@ -1,4 +1,4 @@
-package com.todomvc.pages;
+package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -8,20 +8,28 @@ import ru.yandex.qatools.allure.annotations.Step;
 import static com.codeborne.selenide.CollectionCondition.empty;
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 public class ToDoMVCPage {
 
     public static ElementsCollection tasks = $$("#todo-list>li");
 
-    public static SelenideElement clearCompletedButton = $("#clear-completed");
     public static SelenideElement task(String text){
         return tasks.findBy(exactText(text));
     }
 
     public static SelenideElement editingTask() {
         return tasks.findBy(cssClass("editing")).find(".edit");
+    }
+
+    @Step
+    public static void openTodoMVCPage() {
+        open("http://todomvc.com/examples/troopjs_require/#");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Step
