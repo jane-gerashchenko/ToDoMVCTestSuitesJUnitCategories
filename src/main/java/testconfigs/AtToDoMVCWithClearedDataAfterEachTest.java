@@ -6,13 +6,13 @@ import org.junit.Before;
 
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static com.codeborne.selenide.Selenide.open;
-import static pages.ToDoMVCPage.openTodoMVCPage;
+import static pages.ToDoMVCPage.openToDoMVCPage;
 
 public class AtToDoMVCWithClearedDataAfterEachTest extends BrowserConfigAndReportedScreenshotsPerTest {
 
     @Before
     public void loadToDoMVCPage() {
-        openTodoMVCPage();
+        openToDoMVCPage();
     }
 
     @After

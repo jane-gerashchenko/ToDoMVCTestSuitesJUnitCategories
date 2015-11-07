@@ -23,7 +23,7 @@ public class ToDoMVCPage {
     }
 
     @Step
-    public static void openTodoMVCPage() {
+    public static void openToDoMVCPage() {
         open("http://todomvc.com/examples/troopjs_require/#");
         try {
             Thread.sleep(1000);
