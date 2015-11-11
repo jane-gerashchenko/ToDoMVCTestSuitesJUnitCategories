@@ -24,7 +24,7 @@ public class ToDoMVCPage {
 
     @Step
     public static void openToDoMVCPage() {
-        open("http://todomvc.com/examples/troopjs_require/#");
+        open("https://todomvc4tasj.herokuapp.com/");
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
